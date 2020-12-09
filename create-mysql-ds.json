@@ -1,0 +1,12 @@
+{
+    "name"           : "mysql-csc-4710", 
+    "type"           : "mysql", 
+    "access"         : "proxy",
+    "isDefault"      : true,
+    "url"            : "mysql-csc-4710:3306",
+    "user"           : "csc4710",
+    "database"       : "CSC4710",
+    "secureJsonData" : {
+        "password" : "password"
+    }
+}
