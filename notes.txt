@@ -1,0 +1,59 @@
+# Docker images (evaluation latest version)
+    docker pull mysql:latest
+    docker pull grafana/grafana:latest 
+    
+    
+# Docker network
+    docker network create gsu
+
+
+# Docker container
+    docker run --name mysql-csc-4710 --network gsu -e MYSQL_ROOT_PASSWORD=my-secret-pw -p 3306:3306 -d mysql:latest
+    docker run -d -p 3000:3000 --name grafana-csc-4710 --network gsu -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel" grafana/grafana:latest
+    
+
+    + remove
+        docker container stop mysql-csc-4710
+        docker container stop grafana-csc-4710
+
+        docker container rm mysql-csc-4710
+        docker container rm grafana-csc-4710
+
+
+# Network
+    docker inspect mysql-csc-4710 | grep -i ipaddress
+
+    "SecondaryIPAddresses": null,
+    "IPAddress": "172.17.0.2",
+            "IPAddress": "172.17.0.2",
+
+# Mysql CLI
+     docker exec -it mysql-csc-4710 bash
+     docker exec -it mysql-csc-4710 mysql -u root -pmy-secret-pw
+
+     CREATE DATABASE CSC4710;
+     CREATE USER 'csc4710' IDENTIFIED BY 'password';
+     GRANT all on *.* to 'csc4710';
+
+
+Grafana accounts
+    + Owner
+    + Manager
+    + Employee
+    + Driver
+    + Customer     
+
+
+# Grafana
+docker run -d -p 4000:3000 --name grafana-trash --network gsu -e "GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel" grafana/grafana:latest
+
+# Loader
+Build
+    docker build -f docker/grafana/Dockerfile -t app-grafana-loader docker/grafana
+
+Run
+   docker run --rm --network gsu app-grafana-loader
+  
+
+
+  
