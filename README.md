@@ -77,6 +77,16 @@ _____
 + **Frontend**
     + Visualization
         + Grafana v7.3.4
+        
+_____
+**Entity Relation Diagram**
+_____
+![diagram](er-diagram.svg)
+
+_____
+**Physical Diagram**
+_____
+![diagram](physical.svg)
 
 
 _____
