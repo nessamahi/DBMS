@@ -248,7 +248,7 @@ _____
 
     + **Dashboards:**
         + Driver
-            ![driver](images/driver-dash.png)
+            ![driver](driver-dash.png)
         
         + Manager
             ![manager](images/manager-dash.png)
