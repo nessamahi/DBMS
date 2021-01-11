@@ -78,15 +78,6 @@ _____
     + Visualization
         + Grafana v7.3.4
 
-_____
-**Entity Relation Diagram**
-_____
-![diagram](resources/er-diagram.svg)
-
-_____
-**Physical Diagram**
-_____
-![diagram](resources/physical.svg)
 
 _____
 **Environment Build Process**
