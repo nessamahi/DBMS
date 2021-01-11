@@ -251,7 +251,7 @@ _____
             ![driver](driver-dash.png)
         
         + Manager
-            ![manager](images/manager-dash.png)
+            ![manager](manager-dash.png)
 _____
 **Data Load Generators**
 _____
